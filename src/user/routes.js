@@ -16,7 +16,7 @@ router.put("/:id", validateToken, async(req, res) => {
     await controller.updateUser(req, res);
 });
 
-router.delete("/:id", async(req, res) => {
+router.delete("/:id", validateToken, async(req, res) => {
     await controller.deleteUser(req, res);
 });
 
